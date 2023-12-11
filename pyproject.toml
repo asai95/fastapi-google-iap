@@ -1,6 +1,6 @@
 [project]
 name = "fastapi-google-iap"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
   { name="Viktor Zhemchuzhnikov", email="asai5909@gmail.com" },
 ]
