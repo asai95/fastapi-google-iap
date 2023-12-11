@@ -1,0 +1,144 @@
+[project]
+name = "fastapi-google-iap"
+version = "1.0.0"
+authors = [
+  { name="Viktor Zhemchuzhnikov", email="asai5909@gmail.com" },
+]
+description = "Middleware for FastAPI/Starlette to check requests coming through Google Cloud IAP."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "starlette",
+    "google-auth",
+    "google-auth-oauthlib",
+]
+
+[project.urls]
+Homepage = "https://github.com/asai95/fastapi-google-iap"
+Issues = "https://github.com/asai95/fastapi-google-iap/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+find-directories = ["src"]
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+line-length = 120
+indent-width = 4
+target-version = "py39"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "W",
+    "N",
+    "I",
+    "S",
+    "B",
+    "A",
+    "G",
+    "Q",
+    "C4",
+    "PT",
+    "PL",
+    "RUF",
+    "BLE",
+    "FBT",
+    "C90",
+    "COM",
+    "ISC",
+    "PIE",
+    "T20",
+    "RET",
+    "SLF",
+    "SIM",
+    "TID",
+    "INT",
+    "ARG",
+    "PTH",
+    "ERA",
+    "PGH",
+    "FLY",
+    "LOG",
+    "ANN",
+    "PERF",
+    "ASYNC",
+]
+ignore = ["COM812", "ISC001", "ANN101", "ANN102", "E203"]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+preview = true
+
+[tool.ruff.per-file-ignores]
+"tests/test_google_iap_middleware.py" = ["PLR2004", "S101", "ANN001", "ANN201"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.mypy]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+[[tool.mypy.overrides]]
+module = ["google.*", "fastapi_google_iap"]
+ignore_missing_imports = true
