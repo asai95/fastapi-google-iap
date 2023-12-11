@@ -8,7 +8,12 @@ description = "Middleware for FastAPI/Starlette to check requests coming through
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
@@ -25,7 +30,9 @@ Issues = "https://github.com/asai95/fastapi-google-iap/issues"
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
-find-directories = ["src"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.

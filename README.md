@@ -1,6 +1,6 @@
 # fastapi-google-iap
 
-[![PyPI version](https://badge.fury.io/py/fastapi-google-iap.svg)](https://badge.fury.io/py/fastapi-google-iap)
+![PyPI - Version](https://img.shields.io/pypi/v/fastapi-google-iap?color=%2300CD00)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fastapi-google-iap)](https://pypi.org/project/fastapi-google-iap/)
 [![PyPI - License](https://img.shields.io/pypi/l/fastapi-google-iap)](https://pypi.org/project/fastapi-google-iap/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/fastapi-google-iap)](https://pypi.org/project/fastapi-google-iap/)
