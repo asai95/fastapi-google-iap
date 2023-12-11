@@ -70,7 +70,7 @@ def iap_middleware_class_factory() -> Generator[Callable[..., Type[GoogleIapMidd
 
         def _get_patched_middleware(id_token_info: Dict[str, Any]) -> Type[GoogleIapMiddleware]:
             mocked_method.return_value = id_token_info
-            GoogleIapMiddleware._get_and_verify_id_token = mocked_method  # noqa: SLF001
+            GoogleIapMiddleware._get_and_verify_id_token = mocked_method  # type: ignore[method-assign] # noqa: SLF001
             return GoogleIapMiddleware
 
         yield _get_patched_middleware
